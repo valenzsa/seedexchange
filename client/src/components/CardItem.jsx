@@ -1,4 +1,5 @@
 import { Button, Card } from "react-bootstrap";
+import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 
 const CardItem = () => {
   return (
@@ -9,6 +10,16 @@ const CardItem = () => {
         <Card.Text>
           Some quick example text to build on the card title and make up the
           bulk of the cards content.
+        </Card.Text>
+        <Card.Text className="ratings" as="div">
+          <div className="star-ratings">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaRegStar />
+          </div>
+          <div className="number-of-reviews">25 Reviews</div>
         </Card.Text>
         <Card.Text
           className="prices d-flex mb-2"
