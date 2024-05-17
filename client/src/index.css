@@ -13,3 +13,9 @@ html {
 body {
   font-family: "Quicksand", sans-serif;
 }
+
+.card .card-body .prices .price {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 20px;
+}

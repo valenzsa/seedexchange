@@ -1,15 +1,22 @@
-import { Button, Container, Form, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import {
+  Button,
+  Container,
+  Form,
+  Nav,
+  Navbar,
+  NavDropdown,
+} from "react-bootstrap";
 
 const Header = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary mb-5">
+    <Navbar expand="lg" className="mb-5">
       <Container fluid>
         <Navbar.Brand href="#">Seed Exchange</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            style={{ maxHeight: "100px" }}
             navbarScroll
           >
             <NavDropdown title="Seeds" id="navbarScrollingDropdown">
@@ -34,10 +41,8 @@ const Header = () => {
           </Form>
 
           <Nav>
-            <Nav.Link href="#deets">My Account</Nav.Link>
-            <Nav.Link href="#memes">
-              Cart
-            </Nav.Link>
+            <Nav.Link href="#">My Account</Nav.Link>
+            <Nav.Link href="#">Cart</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
