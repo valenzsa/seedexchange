@@ -11,7 +11,10 @@ const CardItem = () => {
           Some quick example text to build on the card title and make up the
           bulk of the cards content.
         </Card.Text>
-        <Card.Text className="ratings" as="div">
+        <Card.Text
+          className="ratings mb-2 d-flex align-items-baseline"
+          as="div"
+        >
           <div className="star-ratings">
             <FaStar />
             <FaStar />
@@ -22,7 +25,7 @@ const CardItem = () => {
           <div className="number-of-reviews">25 Reviews</div>
         </Card.Text>
         <Card.Text
-          className="prices d-flex mb-2"
+          className="prices d-flex mb-3"
           style={{ gap: "10px", alignItems: "baseline" }}
           as="div"
         >

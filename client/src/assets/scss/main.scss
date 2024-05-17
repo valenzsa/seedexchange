@@ -14,8 +14,14 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-.card .card-body .ratings .star-ratings svg {
-  fill: #ffcc00;
+.card {
+  .card-body {
+    .ratings {
+      .star-ratings {
+        svg {
+          fill: #ffcc00;
+        }
+      }
+    }
+  }
 }
-
-/*# sourceMappingURL=index.css.map */
