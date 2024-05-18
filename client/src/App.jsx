@@ -12,28 +12,28 @@ const App = () => {
 
       <Container>
         <Row className="justify-content-md-center mb-5">
-          <Col lg={3} md={3} sm={3} xs={12} className="mb-3">
+          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
             <CardItem />
           </Col>
-          <Col lg={3} md={3} sm={3} xs={12} className="mb-3">
+          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
             <CardItem />
           </Col>
-          <Col lg={3} md={3} sm={3} xs={12} className="mb-3">
+          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
             <CardItem />
           </Col>
-          <Col lg={3} md={3} sm={3} xs={12} className="mb-3">
+          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
             <CardItem />
           </Col>
-          <Col lg={3} md={3} sm={3} xs={12} className="mb-3">
+          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
             <CardItem />
           </Col>
-          <Col lg={3} md={3} sm={3} xs={12} className="mb-3">
+          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
             <CardItem />
           </Col>
-          <Col lg={3} md={3} sm={3} xs={12} className="mb-3">
+          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
             <CardItem />
           </Col>
-          <Col lg={3} md={3} sm={3} xs={12} className="mb-3">
+          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
             <CardItem />
           </Col>
         </Row>
