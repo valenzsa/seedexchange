@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import CardItem from "./components/CardItem";
+import CardItemContainer from "./components/CardItemContainer";
 
 const App = () => {
   return (
@@ -12,30 +12,7 @@ const App = () => {
 
       <Container>
         <Row className="justify-content-md-center mb-5">
-          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
-            <CardItem />
-          </Col>
-          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
-            <CardItem />
-          </Col>
-          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
-            <CardItem />
-          </Col>
-          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
-            <CardItem />
-          </Col>
-          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
-            <CardItem />
-          </Col>
-          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
-            <CardItem />
-          </Col>
-          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
-            <CardItem />
-          </Col>
-          <Col lg={3} md={4} sm={6} xs={12} className="mb-3">
-            <CardItem />
-          </Col>
+          <CardItemContainer />
         </Row>
       </Container>
 
