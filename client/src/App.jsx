@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CardItemContainer from "./components/CardItemContainer";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
@@ -10,11 +11,7 @@ const App = () => {
         <Header />
       </Container>
 
-      <Container>
-        <Row className="justify-content-md-center mb-5">
-          <CardItemContainer />
-        </Row>
-      </Container>
+      <Outlet />
 
       <Container fluid>
         <Footer />
