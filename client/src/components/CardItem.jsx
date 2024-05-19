@@ -4,7 +4,6 @@ import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 const CardItem = ({
   id,
   name,
-  description,
   image,
   oldPrice,
   price,
@@ -16,7 +15,6 @@ const CardItem = ({
       <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
-        <Card.Text>{description}</Card.Text>
         <Card.Text
           className="ratings mb-2 d-flex align-items-baseline"
           as="div"
