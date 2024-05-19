@@ -5,6 +5,7 @@ const CardItem = ({
   id,
   name,
   description,
+  image,
   oldPrice,
   price,
   rating,
@@ -12,7 +13,7 @@ const CardItem = ({
 }) => {
   return (
     <Card>
-      <Card.Img variant="top" src="https://placehold.co/300x300" />
+      <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>

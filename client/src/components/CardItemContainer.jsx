@@ -1,4 +1,4 @@
-import { Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import CardItem from "./CardItem";
 import products from "../products";
 

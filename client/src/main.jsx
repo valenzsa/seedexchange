@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import ProductDetail from "./components/ProductDetail.jsx";
+import CardItemContainer from "./components/CardItemContainer.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,8 +14,9 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/ProductDetail/:id",
-        element: <ProductDetail />,
+        index: true,
+        path: "/",
+        element: <CardItemContainer />,
       },
     ],
   },
