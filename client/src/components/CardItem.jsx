@@ -14,7 +14,11 @@ const CardItem = ({
     <Card>
       <Card.Img variant="top" src={image} />
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
+        <Card.Title>
+          <a href={`/product-detail/${id}`} title={name}>
+            {name}
+          </a>
+        </Card.Title>
         <Card.Text
           className="ratings mb-2 d-flex align-items-baseline"
           as="div"

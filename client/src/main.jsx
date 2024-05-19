@@ -18,6 +18,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <CardItemContainer />,
       },
+      {
+        path: "/product-detail/:id",
+        element: <ProductDetail />,
+      },
     ],
   },
 ]);

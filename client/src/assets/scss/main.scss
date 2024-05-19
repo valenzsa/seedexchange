@@ -16,6 +16,15 @@ body {
 
 .card {
   .card-body {
+    .card-title {
+      a {
+        color: #000;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
     .ratings {
       .star-ratings {
         svg {
