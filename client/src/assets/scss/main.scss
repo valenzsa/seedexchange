@@ -1,3 +1,8 @@
+:root {
+  --black: #000;
+  --orange: #ffcc00;
+}
+
 *,
 ::before,
 ::after {
@@ -18,7 +23,7 @@ body {
   .card-body {
     .card-title {
       a {
-        color: #000;
+        color: var(--black);
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -28,7 +33,7 @@ body {
     .ratings {
       .star-ratings {
         svg {
-          fill: #ffcc00;
+          fill: var(--orange);
         }
       }
     }
