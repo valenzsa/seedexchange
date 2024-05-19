@@ -14,7 +14,7 @@ const products = [
   },
   {
     id: "2",
-    name: "Okra",
+    name: "Simpson Okra",
     description:
       'The straight, green, downy pods of this variety are intermediate in length and width, and are best eaten when under 5" long. Seed Savers Exchange member Dr. James Wolfe received the variety from the Simpson family of Rogersville, Tennessee. D.V. (Simpson) Thomas remembers her mother, Nora, growing this okra as far back as the early 1940s.',
     image:
