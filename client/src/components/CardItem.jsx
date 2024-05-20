@@ -42,7 +42,9 @@ const CardItem = ({
           </div>
           <div className="price">${price}</div>
         </Card.Text>
-        <Button variant="primary">Add To Cart</Button>
+        <Button className="btn btn-outline-dark" variant="light">
+          Add To Cart
+        </Button>
       </Card.Body>
     </Card>
   );
