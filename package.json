@@ -1,0 +1,30 @@
+{
+  "name": "seedexchange",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "eCommerce application built with MERN",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valenzsa/seedexchange.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valenzsa/seedexchange/issues"
+  },
+  "homepage": "https://github.com/valenzsa/seedexchange#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  }
+}
