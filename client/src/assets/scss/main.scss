@@ -20,6 +20,11 @@ body {
 }
 
 .card {
+  .card-img-top {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
   .card-body {
     .card-title {
       a {

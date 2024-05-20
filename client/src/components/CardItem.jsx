@@ -4,15 +4,16 @@ import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 const CardItem = ({
   id,
   name,
-  image,
+  images,
   oldPrice,
   price,
   rating,
   numberOfReviews,
 }) => {
+  console.log(images);
   return (
     <Card>
-      <Card.Img variant="top" src={image} />
+      <Card.Img variant="top" src={images[0]} />
       <Card.Body>
         <Card.Title>
           <a href={`/product-detail/${id}`} title={name}>

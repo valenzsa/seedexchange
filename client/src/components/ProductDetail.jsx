@@ -32,7 +32,7 @@ const ProductDetail = () => {
       <Row>
         <Col lg={6} md={6} sm={12} xs={12}>
           <img
-            src={product.image}
+            src={product.images[0]}
             alt={product.title}
             className="img-fluid d-flex"
           />
