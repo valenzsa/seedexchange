@@ -1,8 +1,8 @@
 {
-  "name": "seedexchange",
+  "name": "Seed Exchange",
   "version": "1.0.0",
   "type": "module",
-  "description": "eCommerce application built with MERN",
+  "description": "eCommerce application built with MongoDB, Express, React and NodeJS",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
