@@ -3,6 +3,12 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import products from "../products";
 
 const ProductDetail = () => {
@@ -31,11 +37,29 @@ const ProductDetail = () => {
     <Container>
       <Row>
         <Col lg={6} md={6} sm={12} xs={12}>
-          <img
+          {/* <img
             src={product.images[0]}
             alt={product.title}
             className="img-fluid d-flex"
-          />
+          /> */}
+
+          <Swiper
+            // install Swiper modules
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            {product.images.map((image) => (
+              <SwiperSlide>
+                <img className="img-fluid" src={image} alt="" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </Col>
         <Col lg={6} md={6} sm={12} xs={12}>
           <h1>{product.name}</h1>
@@ -63,7 +87,7 @@ const ProductDetail = () => {
           <p>{product.description}</p>
           <div className="d-flex">
             <input
-              class="form-control text-center me-3"
+              className="form-control text-center me-3"
               id="inputQuantity"
               type="num"
               value="1"

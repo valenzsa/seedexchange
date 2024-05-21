@@ -5,7 +5,7 @@ const products = [
     description:
       "Introduced into the 1998 Yearbook by Seed Savers Exchange member Jeff Nekola. Grown since the early 1900s by Lithuanian immigrants in Sheboygan, Wisconsin. Pink paste-type 4-6 ounce fruits. Excellent flavor. Heavy yields, great for canning.",
     images: [
-      "https://shop.seedsavers.org/site/img/seo-images/1484-sheboygan-tomato-organic.jpg",
+      "https://i.etsystatic.com/28841995/r/il/ba9eeb/3475483670/il_794xN.3475483670_jyqa.jpg",
     ],
     oldPrice: 2.99,
     price: 1.99,
@@ -36,7 +36,7 @@ const products = [
     description:
       'This Japanese climbing variety bears tender, crisp, and slightly tart 9"-long cucumbers that are excellent for slicing or pickling. Listed by J.M. Thornton & Company in 1894, this variety’s strong grasping tendrils make it ideal for growing on a trellis or fence, but it can also be grown on the ground.',
     images: [
-      "https://shop.seedsavers.org/site/img/seo-images/1191-japanese-climbing-cucumber-organic.jpg",
+      "https://i.etsystatic.com/19374939/r/il/c5bf86/2368194912/il_794xN.2368194912_qnkx.jpg",
     ],
     oldPrice: 1.99,
     price: 0.99,
@@ -47,9 +47,12 @@ const products = [
   {
     id: "4",
     name: "Pingtung Long Eggplant",
-    description: "",
+    description:
+      "This variety is an Asian classic long slim eggplant. Very easy for management. High yield. Cook it or barbecue as you like. There are 1 grams of seeds inside, which is enough to meet the needs of most people for planting in the yard.",
     images: [
-      "https://shop.seedsavers.org/site/img/seo-images/0620-pingtung-long-eggplant-organic.jpg",
+      "https://i.etsystatic.com/19374939/r/il/b11750/2778210823/il_794xN.2778210823_f2ft.jpg",
+      "https://i.etsystatic.com/19374939/r/il/61826c/2117014978/il_794xN.2117014978_k5rz.jpg",
+      "https://i.etsystatic.com/19374939/r/il/a4b50d/2778210755/il_794xN.2778210755_rduh.jpg",
     ],
     oldPrice: 5.99,
     price: 1.99,
