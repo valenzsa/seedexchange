@@ -47,5 +47,10 @@ body {
 .swiper-container .swiper.mySwiper2 .swiper-slide img {
   height: 100%;
 }
+.swiper-container .swiper.mySwiper .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /*# sourceMappingURL=index.css.map */
