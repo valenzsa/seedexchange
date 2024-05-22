@@ -70,6 +70,12 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        .swiper-slide {
+          border: 1px solid #fff;
+          &.swiper-slide-thumb-active {
+            border: 1px solid #000;
+          }
+        }
       }
     }
   }

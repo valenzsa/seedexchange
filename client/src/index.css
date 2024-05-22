@@ -52,5 +52,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+.swiper-container .swiper.mySwiper .swiper-wrapper .swiper-slide {
+  border: 1px solid #fff;
+}
+.swiper-container .swiper.mySwiper .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
+  border: 1px solid #000;
+}
 
 /*# sourceMappingURL=index.css.map */
