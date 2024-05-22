@@ -1,24 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+//import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/free-mode";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "swiper/css/thumbs";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import products from "../products";
 
 const ProductDetail = () => {
   //const [product, setProduct] = useState("");
 
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
   const ProductID = useParams();
 
   let product = products.find((product) => product.id === ProductID.id);
 
-  console.log(product);
+  //console.log(product);
 
   // const fetchProduct = async () => {
   //   try {
@@ -43,8 +46,7 @@ const ProductDetail = () => {
             className="img-fluid d-flex"
           /> */}
 
-          <Swiper
-            // install Swiper modules
+          {/* <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}
@@ -53,6 +55,44 @@ const ProductDetail = () => {
             scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
+          >
+            {product.images.map((image) => (
+              <SwiperSlide>
+                <img className="img-fluid" src={image} alt="" />
+              </SwiperSlide>
+            ))}
+          </Swiper> */}
+
+          <Swiper
+            style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            loop={true}
+            spaceBetween={10}
+            navigation={true}
+            thumbs={{
+              swiper:
+                thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+            }}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper2"
+          >
+            {product.images.map((image) => (
+              <SwiperSlide>
+                <img className="img-fluid" src={image} alt="" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            loop={true}
+            spaceBetween={10}
+            slidesPerView={4}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper"
           >
             {product.images.map((image) => (
               <SwiperSlide>

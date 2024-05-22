@@ -36,4 +36,16 @@ body {
   fill: var(--orange);
 }
 
+.mySwiper2 {
+  height: 400px;
+}
+.mySwiper2 .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mySwiper2 .swiper-slide img {
+  height: 100%;
+}
+
 /*# sourceMappingURL=index.css.map */
