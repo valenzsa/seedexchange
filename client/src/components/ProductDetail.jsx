@@ -62,44 +62,45 @@ const ProductDetail = () => {
               </SwiperSlide>
             ))}
           </Swiper> */}
-
-          <Swiper
-            style={{
-              "--swiper-navigation-color": "#fff",
-              "--swiper-pagination-color": "#fff",
-            }}
-            loop={true}
-            spaceBetween={10}
-            navigation={true}
-            thumbs={{
-              swiper:
-                thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
-            }}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper2"
-          >
-            {product.images.map((image) => (
-              <SwiperSlide>
-                <img className="img-fluid" src={image} alt="" />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <Swiper
-            onSwiper={setThumbsSwiper}
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={4}
-            freeMode={true}
-            watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className="mySwiper"
-          >
-            {product.images.map((image) => (
-              <SwiperSlide>
-                <img className="img-fluid" src={image} alt="" />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <div className="swiper-container">
+            <Swiper
+              style={{
+                "--swiper-navigation-color": "#fff",
+                "--swiper-pagination-color": "#fff",
+              }}
+              loop={true}
+              spaceBetween={10}
+              navigation={true}
+              thumbs={{
+                swiper:
+                  thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+              }}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper2"
+            >
+              {product.images.map((image) => (
+                <SwiperSlide>
+                  <img className="img-fluid" src={image} alt="" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              loop={true}
+              spaceBetween={10}
+              slidesPerView={4}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper"
+            >
+              {product.images.map((image) => (
+                <SwiperSlide>
+                  <img className="img-fluid" src={image} alt="" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </Col>
         <Col lg={6} md={6} sm={12} xs={12}>
           <h1>{product.name}</h1>

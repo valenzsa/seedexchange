@@ -36,15 +36,15 @@ body {
   fill: var(--orange);
 }
 
-.mySwiper2 {
+.swiper-container .swiper.mySwiper2 {
   height: 400px;
 }
-.mySwiper2 .swiper-slide {
+.swiper-container .swiper.mySwiper2 .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.mySwiper2 .swiper-slide img {
+.swiper-container .swiper.mySwiper2 .swiper-slide img {
   height: 100%;
 }
 
