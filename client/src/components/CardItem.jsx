@@ -13,7 +13,12 @@ const CardItem = ({
   console.log(images);
   return (
     <Card>
-      <Card.Img variant="top" src={images[0]} />
+      <Card.Img
+        variant="top"
+        src={images[0]}
+        alt={name}
+        className="img-fluid"
+      />
       <Card.Body>
         <Card.Title>
           <a href={`/product-detail/${id}`} title={name}>
