@@ -80,7 +80,9 @@ const ProductDetail = () => {
             >
               {product.images.map((image) => (
                 <SwiperSlide>
-                  <img className="img-fluid" src={image} alt="" />
+                  <div className="image-container">
+                    <img className="img-fluid" src={image} alt="" />
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
