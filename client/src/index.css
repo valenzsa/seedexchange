@@ -19,9 +19,14 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-.card .card-img-top {
+.card .image-container {
+  display: flex;
+  background-color: #000;
+  height: 215px;
+}
+.card .image-container .card-img-top {
   width: 300px;
-  height: 300px;
+  height: auto;
   object-fit: cover;
   margin: 0 auto;
 }
