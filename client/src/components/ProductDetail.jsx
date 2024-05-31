@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
@@ -10,31 +10,28 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import products from "../products";
+//import products from "../products";
 
 const ProductDetail = () => {
-  //const [product, setProduct] = useState("");
+  const [product, setProduct] = useState({});
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  const ProductID = useParams();
+  const productId = useParams();
 
-  let product = products.find((product) => product.id === ProductID.id);
+  const fetchProduct = async () => {
+    try {
+      const { data } = await axios.get(`/api/products/${productId.id}`);
+      console.log(data);
+      setProduct(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  //console.log(product);
-
-  // const fetchProduct = async () => {
-  //   try {
-  //     const { data } = await axios.get(products);
-  //     console.log(data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   fetchProduct();
-  // }, []);
+  useEffect(() => {
+    fetchProduct();
+  }, []);
 
   return (
     <Container>
@@ -78,7 +75,7 @@ const ProductDetail = () => {
               modules={[FreeMode, Navigation, Thumbs]}
               className="mySwiper2"
             >
-              {product.images.map((image) => (
+              {product?.images?.map((image) => (
                 <SwiperSlide>
                   <div className="image-container">
                     <img className="img-fluid" src={image} alt="" />
@@ -96,7 +93,7 @@ const ProductDetail = () => {
               modules={[FreeMode, Navigation, Thumbs]}
               className="mySwiper"
             >
-              {product.images.map((image) => (
+              {product?.images?.map((image) => (
                 <SwiperSlide>
                   <img className="img-fluid" src={image} alt="" />
                 </SwiperSlide>
