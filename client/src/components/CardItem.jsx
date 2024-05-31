@@ -10,7 +10,6 @@ const CardItem = ({
   rating,
   numberOfReviews,
 }) => {
-  console.log(images);
   return (
     <Card>
       <Card.Text as="div" className="image-container">
