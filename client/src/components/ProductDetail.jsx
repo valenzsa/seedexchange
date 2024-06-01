@@ -125,7 +125,7 @@ const ProductDetail = () => {
             <div className="price fs-3">${product.price}</div>
           </div>
           <p>{product.description}</p>
-          <div className="d-flex">
+          <div className="d-flex mb-5">
             <input
               className="form-control text-center me-3"
               id="inputQuantity"
@@ -136,6 +136,28 @@ const ProductDetail = () => {
             <Button className="btn btn-outline-dark" variant="light">
               Add To Cart
             </Button>
+          </div>
+          <div className="categories">
+            <strong>Categories: </strong>
+            {product?.category?.map((cat, index) => {
+              return (
+                <span key={index}>
+                  {cat}
+                  {index < cat.length - 1 ? ", " : ""}
+                </span>
+              );
+            })}
+          </div>
+          <div className="tags">
+            <strong>Tags: </strong>
+            {product?.tags?.map((tag, index) => {
+              return (
+                <span key={index}>
+                  {tag}
+                  {index < tag.length - 1 ? ", " : ""}
+                </span>
+              );
+            })}
           </div>
         </Col>
       </Row>
