@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 const App = () => {
   return (
     <>
-      <Container fluid className="bg-body-secondary ms-0 me-0">
+      <Container fluid className="bg-body-secondary ms-0 me-0 mb-5">
         <Header />
       </Container>
 
