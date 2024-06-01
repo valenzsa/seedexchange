@@ -7,11 +7,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import ProductDetail from "./components/ProductDetail.jsx";
 import CardItemContainer from "./components/CardItemContainer.jsx";
+import Error from "./components/Error.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
