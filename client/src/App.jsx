@@ -13,7 +13,7 @@ const App = () => {
 
       <Outlet />
 
-      <Container fluid>
+      <Container fluid className="mt-auto py-3 bg-light">
         <Footer />
       </Container>
     </>

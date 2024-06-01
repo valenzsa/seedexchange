@@ -2,10 +2,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer>
+    <footer className="footer mt-auto py-3 bg-light">
       Copyright @{currentYear}. All Rights Reserved.
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
