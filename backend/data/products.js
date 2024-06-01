@@ -40,8 +40,8 @@ const products = [
     numberOfSeedsPerPack: 10,
     seedCount: 35,
     typeOfPlant: "Vegetable",
-    category: ["Okra"],
-    tags: [],
+    category: ["Okra", "Fruit Vegetables"],
+    tags: ["Hot Weather", "Mild Weather", "Warm Weather"],
   },
   {
     id: "3",
@@ -61,7 +61,7 @@ const products = [
     seedCount: 25,
     typeOfPlant: "Vegetable",
     category: ["Cucumber"],
-    tags: [],
+    tags: ["Mild Weather", "Warm Weather"],
   },
   {
     id: "4",
