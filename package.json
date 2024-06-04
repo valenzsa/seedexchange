@@ -22,11 +22,12 @@
   },
   "homepage": "https://github.com/valenzsa/seedexchange#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "dotenv": "^16.4.5",
     "nodemon": "^3.1.0"
   }
 }
