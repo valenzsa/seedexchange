@@ -9,7 +9,9 @@
     "server": "nodemon backend/server.js",
     "client": "npm run dev --prefix client",
     "sass": "npm run sass --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run sass\""
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run sass\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
   },
   "repository": {
     "type": "git",
