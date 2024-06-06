@@ -1,6 +1,5 @@
 const products = [
   {
-    id: "1",
     name: "Sheboygan Tomato",
     shortDescription: "",
     description:
@@ -21,7 +20,6 @@ const products = [
     tags: [],
   },
   {
-    id: "2",
     name: "Clemson Spineless Okra Seeds",
     shortDescription: "",
     description:
@@ -45,7 +43,6 @@ const products = [
     tags: ["Hot Weather", "Mild Weather", "Warm Weather"],
   },
   {
-    id: "3",
     name: "Japanese Climbing Cucumber",
     shortDescription: "",
     description:
@@ -66,7 +63,6 @@ const products = [
     tags: ["Mild Weather", "Warm Weather"],
   },
   {
-    id: "4",
     name: "Pingtung Long Eggplant",
     shortDescription: "",
     description:
@@ -89,7 +85,6 @@ const products = [
     tags: [],
   },
   {
-    id: "5",
     name: "Black Cherry Tomato",
     shortDescription: "",
     description:
@@ -110,7 +105,6 @@ const products = [
     tags: [],
   },
   {
-    id: "6",
     name: "Shishito Pepper",
     shortDescription: "",
     description:
@@ -131,7 +125,6 @@ const products = [
     tags: [],
   },
   {
-    id: "7",
     name: "Burgess Buttercup Squash",
     shortDescription: "",
     description:
@@ -152,7 +145,6 @@ const products = [
     tags: [],
   },
   {
-    id: "8",
     name: "Bloomsdale Spinach",
     shortDescription: "",
     description:
