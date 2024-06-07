@@ -2,7 +2,7 @@ import { Button, Card } from "react-bootstrap";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 
 const CardItem = ({
-  id,
+  _id,
   name,
   images,
   oldPrice,
@@ -23,7 +23,7 @@ const CardItem = ({
 
       <Card.Body>
         <Card.Title>
-          <a href={`/product-detail/${id}`} title={name}>
+          <a href={`/product-detail/${_id}`} title={name}>
             {name}
           </a>
         </Card.Title>
