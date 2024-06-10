@@ -23,7 +23,7 @@ const CardItem = ({
 
       <Card.Body>
         <Card.Title>
-          <a href={`/product-detail/${_id}`} title={name}>
+          <a href={`/products/${_id}`} title={name}>
             {name}
           </a>
         </Card.Title>
