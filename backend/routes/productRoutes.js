@@ -10,6 +10,7 @@ router.get(
   "/",
   asyncHandler(async (request, response) => {
     const products = await Product.find({});
+    //throw new Error("Some error");
     response.json(products);
   })
 );
@@ -22,9 +23,12 @@ router.get(
 
     if (product) {
       return response.json(product);
+    } else {
+      response.status(404);
+      throw new Error("Resource not found");
     }
 
-    response.status(404).json({ message: "Product not found" });
+    //response.status(404).json({ message: "Product not found" });
   })
 );
 
