@@ -15,7 +15,14 @@ const CardItemContainer = () => {
       ) : (
         <Row className="justify-content-md-center mb-5">
           {products.map((product) => (
-            <Col lg={3} md={4} sm={6} xs={12} className="mb-3" key={product.id}>
+            <Col
+              lg={3}
+              md={4}
+              sm={6}
+              xs={12}
+              className="mb-3"
+              key={product._id}
+            >
               <CardItem {...product} />
             </Col>
           ))}
