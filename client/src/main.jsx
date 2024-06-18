@@ -8,8 +8,8 @@ import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import ProductDetail from "./components/ProductDetail.jsx";
-import CardItemContainer from "./components/CardItemContainer.jsx";
 import Error from "./components/Error.jsx";
+import HomeScreen from "./screens/HomeScreen.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       {
         index: true,
         path: "/",
-        element: <CardItemContainer />,
+        element: <HomeScreen />,
       },
       {
         path: "/products/:id",
