@@ -2,16 +2,20 @@ import { Container, Row, Col } from "react-bootstrap";
 import CardItem from "./CardItem";
 //import products from "../products";
 import { useGetProductsQuery } from "../slices/productsApiSlice";
+import Loader from "./Loader";
+import Message from "./Message";
 
 const CardItemContainer = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();
 
   return (
-    <Container>
+    <Container className="g-0">
       {isLoading ? (
-        <h2>Loading...</h2>
+        <Loader />
       ) : error ? (
-        <div>{error?.data?.message || error.error}</div>
+        <Message variant="danger">
+          {error?.data?.message || error.error}
+        </Message>
       ) : (
         <Row className="justify-content-md-center mb-5">
           {products.map((product) => (

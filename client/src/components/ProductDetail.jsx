@@ -12,6 +12,8 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 //import products from "../products";
 import { useGetProductDetailsQuery } from "../slices/productsApiSlice";
+import Loader from "./Loader";
+import Message from "./Message";
 
 const ProductDetail = () => {
   //const [product, setProduct] = useState({});
@@ -46,9 +48,11 @@ const ProductDetail = () => {
   return (
     <Container>
       {isLoading ? (
-        <h2>Loading...</h2>
+        <Loader />
       ) : error ? (
-        <div> {error?.data?.message || error.message}</div>
+        <Message variant="danger">
+          {error?.data?.message || error.error}
+        </Message>
       ) : (
         <Row>
           <Col lg={6} md={6} sm={12} xs={12}>
