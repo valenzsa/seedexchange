@@ -20,6 +20,8 @@ const ProductDetail = () => {
 
   const { id: productId } = useParams();
 
+  const [qty, setQty] = useState(1);
+
   const {
     data: product,
     isLoading,
@@ -44,6 +46,10 @@ const ProductDetail = () => {
   // useEffect(() => {
   //   fetchProduct();
   // }, []);
+
+  const totalInStock = (seedCount, numberOfSeedsPerPack) => {
+    return seedCount / numberOfSeedsPerPack;
+  };
 
   return (
     <Container>
@@ -144,6 +150,11 @@ const ProductDetail = () => {
                 ${product.oldPrice}
               </div>
               <div className="price fs-3">${product.price}</div>
+            </div>
+            <div className="inStock mb-3">
+              {totalInStock(product.seedCount, product.numberOfSeedsPerPack) > 0
+                ? "In Stock"
+                : "Out of Stock"}
             </div>
             <p>{product.description}</p>
             <div className="d-flex mb-5">
