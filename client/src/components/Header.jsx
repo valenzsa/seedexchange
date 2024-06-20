@@ -6,8 +6,11 @@ import {
   Navbar,
   NavDropdown,
 } from "react-bootstrap";
+import { useGetProductsQuery } from "../slices/productsApiSlice";
 
 const Header = () => {
+  const { data: products, isLoading, error } = useGetProductsQuery();
+
   return (
     <Navbar expand="lg">
       <Container fluid>
@@ -20,10 +23,17 @@ const Header = () => {
             navbarScroll
           >
             <NavDropdown title="Vegetable Seeds" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
+              {products?.map((product) => {
+                return (
+                  <NavDropdown.Item
+                    key={`${product._id}`}
+                    href={`/products/${product._id}`}
+                  >
+                    {product.name}
+                  </NavDropdown.Item>
+                );
+              })}
+
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
                 Something else here
