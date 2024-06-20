@@ -26,8 +26,8 @@ body {
   height: 215px;
 }
 .card .image-container .card-img-top {
-  width: 300px;
-  height: auto;
+  width: inherit;
+  height: inherit;
   object-fit: cover;
   margin: 0 auto;
 }
@@ -51,6 +51,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.swiper-container .swiper.mySwiper2 .swiper-slide .image-container {
+  height: 400px;
+}
+.swiper-container .swiper.mySwiper2 .swiper-slide .image-container img {
+  height: inherit;
 }
 .swiper-container .swiper.mySwiper .swiper-wrapper {
   display: flex;
