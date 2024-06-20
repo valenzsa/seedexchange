@@ -152,8 +152,11 @@ const ProductDetail = () => {
               <div className="price fs-3">${product.price}</div>
             </div>
             <div className="inStock mb-3">
+              {Math.floor(
+                totalInStock(product.seedCount, product.numberOfSeedsPerPack)
+              )}
               {totalInStock(product.seedCount, product.numberOfSeedsPerPack) > 0
-                ? "In Stock"
+                ? " In Stock"
                 : "Out of Stock"}
             </div>
             <p>{product.description}</p>
