@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 //import axios from "axios";
@@ -21,6 +21,8 @@ const ProductDetail = () => {
   const { id: productId } = useParams();
 
   const [qty, setQty] = useState(1);
+
+  console.log(qty);
 
   const {
     data: product,
@@ -48,8 +50,11 @@ const ProductDetail = () => {
   // }, []);
 
   const totalInStock = (seedCount, numberOfSeedsPerPack) => {
-    return seedCount / numberOfSeedsPerPack;
+    return Number(seedCount / numberOfSeedsPerPack);
   };
+
+  // console.log(typeof totalInStock);
+  // console.log(totalInStock(product?.seedCount, product?.numberOfSeedsPerPack));
 
   return (
     <Container>
@@ -161,13 +166,36 @@ const ProductDetail = () => {
             </div>
             <p>{product.description}</p>
             <div className="d-flex mb-5">
-              <input
+              {/* <input
                 className="form-control text-center me-3"
                 id="inputQuantity"
                 type="num"
-                value="1"
+                value={qty}
+                onChange={(e) => setQty(Number(e.target.value))}
                 style={{ maxWidth: "3rem" }}
-              ></input>
+              ></input> */}
+
+              <Form.Control
+                as="select"
+                value={qty}
+                onChange={(e) => setQty(Number(e.target.value))}
+              >
+                {[
+                  ...Array(
+                    Math.floor(
+                      totalInStock(
+                        product?.seedCount,
+                        product?.numberOfSeedsPerPack
+                      )
+                    )
+                  ).keys(),
+                ].map((x) => (
+                  <option key={x + 1} value={x + 1}>
+                    {x + 1}
+                  </option>
+                ))}
+              </Form.Control>
+
               <Button className="btn btn-outline-dark" variant="light">
                 Add To Cart
               </Button>
