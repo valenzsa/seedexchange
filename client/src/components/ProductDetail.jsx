@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { FaStar, FaRegStar } from "react-icons/fa";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 //import axios from "axios";
 //import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,15 +15,17 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { useGetProductDetailsQuery } from "../slices/productsApiSlice";
 import Loader from "./Loader";
 import Message from "./Message";
+import { addToCart } from "../slices/cartSlice";
 
 const ProductDetail = () => {
   //const [product, setProduct] = useState({});
 
   const { id: productId } = useParams();
 
-  const [qty, setQty] = useState(1);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  console.log(qty);
+  const [qty, setQty] = useState(1);
 
   const {
     data: product,
@@ -32,6 +35,11 @@ const ProductDetail = () => {
 
   console.log("product detail");
   console.log(product);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart({ ...product, qty }));
+    navigate("/cart");
+  };
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -196,7 +204,11 @@ const ProductDetail = () => {
                 ))}
               </Form.Control>
 
-              <Button className="btn btn-outline-dark" variant="light">
+              <Button
+                className="btn btn-outline-dark"
+                variant="light"
+                onClick={addToCartHandler}
+              >
                 Add To Cart
               </Button>
             </div>
