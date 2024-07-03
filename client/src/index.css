@@ -41,6 +41,10 @@ body {
 .card .card-body .ratings .star-ratings svg {
   fill: var(--orange);
 }
+.card .card-body button {
+  background-color: var(--black);
+  color: var(--white);
+}
 
 .swiper-container .swiper.mySwiper2 {
   height: 400px;
